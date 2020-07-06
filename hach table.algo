@@ -1,0 +1,33 @@
+ALGORITHM hach table
+VAR
+ HASH_TABLE<arr1_INTEGER,arr2_INTERER>
+ existe: BOOLEAN;
+ count: INTGER;
+ i,j : INTGER;
+ BEGIN
+ 
+ FOR i FROM 0 TO arr1.length   DO
+   existe := false
+   FOR j FROM i+1 TO arr2.length -1  DO
+    IF (count.lookup(existe)=true) THEN
+        breack;
+    END_IF
+   END_FOR
+   IF (htab.lookup(existe)=false) THEN
+      count := count.get(arr1[i],arr2[j]);
+        count.insert(arr1[i],arr2[j],count+1);
+   END_IF
+ END_FOR
+
+ FOR i FROM 0 TO arr2.length  DO
+  existe := false
+   FOR j FROM i+1 TO arr1.length -1  DO
+     IF (count.lookup(existe)=true) THEN
+         breack;
+    END_IF
+   END_FOR
+   IF (htab.lookup(existe)=false) THEN
+     count := count.get(arr2[i],arr1[i]);
+        count.insert(arr2[i],arr1[j],count+1);
+ END_FOR  
+ END
